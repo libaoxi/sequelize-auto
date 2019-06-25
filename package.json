@@ -26,7 +26,7 @@
     ]
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --globals setImmediate,clearImmediate,__core-js_shared__ --ui tdd --check-leaks --colors -t 15000 --reporter spec \"test/**/*.test.js\"",
+    "test": "mocha --globals setImmediate,clearImmediate,__core-js_shared__ --ui tdd --check-leaks --colors -t 15000 --reporter spec \"test/**/*.test.js\"",
     "test-postgres": "./node_modules/.bin/cross-env DIALECT=postgres npm run test",
     "test-mysql": "./node_modules/.bin/cross-env DIALECT=mysql npm run test",
     "test-sqlite": "./node_modules/.bin/cross-env DIALECT=sqlite npm run test",
@@ -51,6 +51,7 @@
     "async": "3.1.0",
     "eslint": "6.0.1",
     "graceful-fs-extra": "2.0.0",
+    "lodash": "4.17.11",
     "sequelize": "5.8.12",
     "yargs": "13.2.4"
   },

@@ -1,11 +1,12 @@
 
-var chai = require('chai');
-var expect = chai.expect;
-var helpers = require('./helpers');
-var dialect = helpers.getTestDialect();
+const chai = require('chai');
+const expect = chai.expect;
+const helpers = require('./helpers');
+const dialect = helpers.getTestDialect();
+const { describe, it } = require('mocha')
 
-var dialects = require('../lib/dialects');
-var _ = helpers.Sequelize.Utils._
+const dialects = require('../lib/dialects');
+const _ = require('lodash')
 
 describe(helpers.getTestDialectTeaser('sequelize-auto dialects'), function() {
   describe('getForeignKeysQuery', function () {
